@@ -1,5 +1,5 @@
-NUMBER_OF_CATEGORIES = 5
-PRODUCTS_PER_CATEGORY = 5
+NUMBER_OF_CATEGORIES = 4
+PRODUCTS_PER_CATEGORY = 25
 
 Product.delete_all
 Category.delete_all
@@ -20,6 +20,6 @@ end
 puts "Created #{Category.count} Categories."
 puts "Created #{Product.count} Products."
 
-if Rails.env.development?
-  AdminUser.create!(email: "admin@example.com", password: "password", password_confirmation: "password")
-end
+# if Rails.env.development?
+#  AdminUser.create!(email: "admin@example.com", password: "password", password_confirmation: "password")
+# end
