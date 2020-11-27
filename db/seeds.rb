@@ -19,3 +19,7 @@ end
 
 puts "Created #{Category.count} Categories."
 puts "Created #{Product.count} Products."
+
+if Rails.env.development?
+  AdminUser.create!(email: "admin@example.com", password: "password", password_confirmation: "password")
+end
