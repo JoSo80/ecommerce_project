@@ -2,7 +2,11 @@
   <p>Copyright Wizards of the Coast 2020</p>
   <ul>
     <li><%= link_to 'Home', root_path %></li>
-    <li><%= link_to 'About Us', permalink_path('about_us')%></li>
-    <li><%= link_to 'Contact Us', permalink_path('contact_us')%></li>
+
+
+    <% cms_pages.each do | page |%>
+    <li><%= link_to page.title, permalink_path(page.permalink)%></li>
+    <% end %>
+
   </ul>
 </footer>
