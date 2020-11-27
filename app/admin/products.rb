@@ -8,7 +8,7 @@ ActiveAdmin.register Product do
       f.input :color, as: :string
     end
     f.inputs do
-      f.input :image, as: :file
+      f.input :image, as: :file, hint: f.object.image.present? ? image_tag(f.object.image) : ""
     end
     f.actions         # adds the 'Submit' and 'Cancel' buttons
   end
