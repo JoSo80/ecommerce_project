@@ -32,6 +32,8 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
 gem 'activeadmin' # admin dashboard as a rails engine
 gem 'devise'      # username and password authentication library
 gem 'image_processing'
+gem 'kaminari'
+gem 'pagy'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
