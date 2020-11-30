@@ -1,9 +1,10 @@
+
 <div class="column">
   <div class="card">
     <% if product.image.present?%>
       <div class="card-image">
         <figure class="image">
-          <%= image_tag product.image %>
+          <%= image_tag product.image, alt: product.name %>
         </figure>
       </div>
     <% end %>
@@ -29,4 +30,5 @@
       </p>
     </footer>
   </div>
+
 </div>

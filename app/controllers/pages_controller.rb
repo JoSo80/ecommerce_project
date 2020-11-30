@@ -65,9 +65,4 @@ class PagesController < InheritedResources::Base
   def set_page
     @page = Page.find(params[:id])
   end
-
-  # Only allow a list of trusted parameters through.
-  def page_params
-    params.require(:page).permit(:title, :content, :permalink)
-  end
 end
