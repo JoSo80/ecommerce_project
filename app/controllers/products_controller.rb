@@ -1,7 +1,10 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.order(params[:id])
-    #@pagy, @products = pagy(Products.all)
+    @products = if params[:product] && params[:product][:category_id]
+                  Product.search(params[:product][:category_id])
+                else
+                  Product.all
+                end
   end
 
   def show

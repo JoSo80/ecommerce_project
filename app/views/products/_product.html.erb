@@ -26,9 +26,20 @@
         Set: <br><%= product.set %>
       </p>
       <p class="card-footer-item">
-        Price: <br>$<%= product.price.round(2) %>
+        Price: <br><%= number_to_currency product.price.round(2)%>
       </p>
     </footer>
+    <div>
+      <% if cart.include?(product)%>
+        <%= button_to cart_path(product), method: :delete do%>
+          Remove From Cart
+        <% end %>
+      <% else %>
+        <%= form_with url: cart_index_path do %>
+        <%= hidden_field_tag(:id, product.id)%>
+        <%= button_tag 'Add to Cart'%>
+      <% end %>
+	    <% end %>
+    </div>
   </div>
-
 </div>
