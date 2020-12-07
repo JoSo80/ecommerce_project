@@ -1,11 +1,11 @@
 class ProductsController < ApplicationController
-  def index
-    @products = if params[:product] && params[:product][:category_id]
-                  Product.search(params[:product][:category_id])
-                else
-                  Product.all
-                end
-  end
+  # def index
+  #  @products = if params[:product] && params[:product][:category_id]
+  #                Product.search(params[:product][:category_id])
+  #              else
+  #                Product.all
+  #              end
+  # end
 
   def show
     @product = Product.find(params[:id])

@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!, only: [:show]
   before_action :initialize_session
   skip_before_action :authenticate_user!, only: [:admin_users]
-  # include Pagy::Backend
+  include Pagy::Backend
 
   def cms_pages
     Page.all
