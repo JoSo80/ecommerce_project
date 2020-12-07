@@ -1,7 +1,7 @@
 class SearchesController < ApplicationController
   def new
     @search = Search.new
-    @sets = Product.pluck(:set)
+    @colors = Product.distinct.pluck(:color)
   end
 
   def create

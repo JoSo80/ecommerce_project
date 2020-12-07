@@ -10,12 +10,7 @@
 
 <div class="field">
   <%= s.label :color %>
-  <%= s.text_field :color %>
-</div>
-
-<div class="field">
-  <%= s.label :set %>
-  <%= s.select :set, options_for_select(@sets), :include_blank => true%>
+  <%= s.select :color, options_for_select(@colors), :include_blank => true%>
 </div>
 
 <div class="field">
@@ -24,7 +19,7 @@
 </div>
 
 <div class="actions"><%= s.submit "Search", class: "pure-button pure-button-primary"%></div>
-
+<br/>
 <% end %>
 
 <p><%= link_to 'Back', root_path%></p>

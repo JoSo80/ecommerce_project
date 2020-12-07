@@ -1,17 +1,17 @@
 <h1>Search Results</h1>
-
+<br/>
 <p><%= link_to 'Back', new_search_path %></p>
 
 <% if @search.search_products.empty? %>
 
-  <p>No Records Found</p>
+<p>No Records Found</p>
 
 <% else %>
 
   <% @search.search_products.each do | c |%>
   <br>
     <div class= "div">
-      <h1><%= c.name%></h1>
+      <h1><strong><%= c.name%><strong></h1>
       <p>Price: $<%= c.price%></p>
       <p>Color: <%= c.color%></p>
       <p>Set: <%= c.set%></p>
