@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :pages, except: [:show]
+  resources :searches
 
   get "pages/:permalink" => "pages#permalink", as: :permalink
 

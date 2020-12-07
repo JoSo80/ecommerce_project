@@ -10,6 +10,7 @@
     <script src="https://js.stripe.com/v3/"></script>
   </head>
   <section class="section">
+
   <div class="container">
   <body>
         <header>
@@ -69,6 +70,8 @@
   </body>
     <section class="section">
         <div class="container">
+          <%= link_to "Advanced Search", new_search_path%>
+          <%= render partial: 'shared/search_form' %>
           <%= render partial: 'shared/footer' %>
         </div>
     </section>
